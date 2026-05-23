@@ -5,7 +5,6 @@ import type { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import {
   Baby,
-  CheckCircle2,
   LoaderCircle,
   Minus,
   Phone,
@@ -13,7 +12,6 @@ import {
   ShipWheel,
   UserRound,
   UsersRound,
-  XCircle,
 } from 'lucide-react';
 import { formatPhone } from '@/lib/rsvp-utils';
 import { Animal } from './animated-ark';
@@ -107,7 +105,7 @@ export function RsvpForm() {
   return (
     <motion.form
       onSubmit={handleSubmit}
-      className="relative mt-[-92px] overflow-hidden rounded-[32px] border border-[#e4c38e] bg-[#fff8ea] p-2.5 shadow-[0_26px_70px_rgba(73,55,42,0.18)] sm:rounded-[38px] sm:p-3"
+      className="relative mt-[-92px] overflow-hidden rounded-[32px] border border-[#e4c38e] bg-[#fff8ea] p-2.5 shadow-[0_26px_70px_rgba(73,55,42,0.18)] sm:rounded-[38px] sm:p-3 lg:mt-0"
       initial={{ opacity: 0, y: 44, scale: 0.96 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true, margin: '-80px' }}
@@ -149,12 +147,15 @@ export function RsvpForm() {
           <p className="mx-auto inline-flex min-h-9 items-center rounded-full border border-[#ead2ad] bg-white/70 px-4 text-[0.68rem] font-black uppercase tracking-[0.24em] text-[#b78d35] shadow-sm">
             Confirmação da arca
           </p>
-          <h2 className="font-display mx-auto mt-4 max-w-[11ch] text-balance text-[2.8rem] font-black leading-[0.82] tracking-normal text-[#49372a] sm:text-[3.45rem]">
-            Você vem celebrar?
+          <h2 className="font-display mx-auto mt-4 max-w-[20ch] text-balance text-[2.8rem] font-black leading-[0.82] tracking-normal text-[#49372a] sm:text-[2.5rem]">
+            Você vem comemorar com a gente?
           </h2>
           <p className="mx-auto mt-4 max-w-md text-pretty text-[0.98rem] font-extrabold leading-7 text-[#765f4c]">
-            Confirme quem vai embarcar na festa do Isaac. O endereço chega no
-            convite oficial depois da confirmação.
+            Confirme quem vai embarcar na festa do Isaac.
+          </p>
+          <p className="mx-auto mt-1 max-w-md text-pretty text-[0.98rem] font-extrabold leading-7 text-[#765f4c]">
+            O endereço será enviado no convite oficial depois da sua
+            confirmação.
           </p>
         </div>
 
@@ -283,36 +284,6 @@ function StoryField({
       </span>
       {children}
     </motion.label>
-  );
-}
-
-function AttendButton({
-  active,
-  icon,
-  onClick,
-  children,
-}: {
-  active: boolean;
-  icon: ReactNode;
-  onClick: () => void;
-  children: ReactNode;
-}) {
-  return (
-    <motion.button
-      type="button"
-      onClick={onClick}
-      whileTap={{ scale: 0.96 }}
-      animate={{ scale: active ? 1 : 0.98 }}
-      className={`flex min-h-12 items-center justify-center gap-2 rounded-[19px] text-base font-black transition outline-none ring-[#d8b45f]/25 focus:ring-4 ${
-        active
-          ? 'bg-[#fffdf8] text-[#49372a] shadow-[0_10px_18px_rgba(93,61,41,0.1)]'
-          : 'text-[#7b6654] hover:bg-white/50'
-      }`}
-      aria-pressed={active}
-    >
-      {icon}
-      {children}
-    </motion.button>
   );
 }
 

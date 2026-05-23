@@ -18,7 +18,7 @@ export function LandingPage() {
       <NarrativeJourney />
       <section
         id="confirmar"
-        className="relative pt-30 px-4 pb-24 sm:px-6 lg:px-8"
+        className="relative px-4 pt-30 pb-24 sm:px-6 lg:px-8 lg:pt-8"
       >
         <div className="absolute inset-x-0 top-0 h-40 bg-[#fff7e8]" />
         <div className="relative mx-auto max-w-2xl">
@@ -109,11 +109,15 @@ function NarrativeJourney() {
         viewport={{ once: true, margin: '-90px' }}
         transition={{ type: 'spring', stiffness: 90, damping: 18 }}
       >
-        <div className="relative mt-95 mb-0 h-[480px] bg-[linear-gradient(180deg,#fff6e6_0%,#f8e3be_10%,#f8e3be_90%,#fff6e6_100%)]">
+        <div className="relative mt-95 mb-0 h-[480px] lg:mt-20 lg:h-auto">
+          <div
+            aria-hidden="true"
+            className="absolute left-1/2 top-0 z-0 h-full w-screen -translate-x-1/2 bg-[linear-gradient(180deg,#fff6e6_0%,#f8e3be_10%,#f8e3be_90%,#fff6e6_100%)]"
+          />
           <motion.img
             src="/story-cards-section.png"
             alt="Uma pequena grande história do Isaac"
-            className="w-full select-none absolute -mt-50"
+            className="absolute z-10 -mt-50 w-full select-none lg:relative lg:mt-0"
             draggable={false}
           />
         </div>
