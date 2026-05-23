@@ -35,7 +35,7 @@ function Hero() {
   const sceneY = useTransform(scrollYProgress, [0, 0.22], [0, 44]);
 
   return (
-    <section className="story-sky relative flex min-h-[100svh] flex-col px-4 pt-15 -mb-67 sm:px-6 sm:pb-12 lg:px-8">
+    <section className="story-sky relative flex min-h-[100svh] flex-col px-4 pt-15 -mb-47 sm:px-6 sm:pb-12 lg:px-8">
       <MovingClouds />
       <SoftStars />
 
