@@ -1,26 +1,108 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fffaf0;
+  --foreground: #49372a;
+  --sky: #bfe7f3;
+  --sky-deep: #8fcce0;
+  --cream: #fff7e8;
+  --olive: #8fa66d;
+  --wood: #8b5f3d;
+  --wood-dark: #5d3d29;
+  --gold: #d8b45f;
+  --rose: #eab7a9;
+  --ink-soft: #6f5948;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-display: "Baloo 2", "Baloo 2 Fallback", ui-rounded, system-ui, sans-serif;
+  --font-sans: "Nunito", "Nunito Fallback", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-nunito), "Nunito", ui-sans-serif, system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: #f3d98c;
+  color: #49372a;
+}
+
+button,
+a,
+input,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.paper-grain {
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.68) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 84% 12%, rgba(216, 180, 95, 0.16) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 40% 78%, rgba(139, 95, 61, 0.08) 0 1px, transparent 1.5px);
+  background-size: 28px 28px, 34px 34px, 42px 42px;
+}
+
+.soft-shadow {
+  box-shadow: 0 24px 70px rgba(93, 61, 41, 0.16);
+}
+
+.ark-mask {
+  clip-path: polygon(6% 16%, 94% 16%, 82% 100%, 18% 100%);
+}
+
+.wave-mask {
+  clip-path: ellipse(72% 54% at 50% 42%);
+}
+
+.leaf-shape {
+  border-radius: 72% 0 72% 0;
+}
+
+.font-display {
+  font-family: var(--font-baloo), "Baloo 2", ui-rounded, system-ui, sans-serif;
+}
+
+.story-sky {
+  background:
+    radial-gradient(circle at 18% 12%, rgba(255, 249, 224, 0.9) 0 72px, transparent 73px),
+    linear-gradient(180deg, #a9ddec 0%, #d8f1ec 54%, #fff5e5 100%);
+}
+
+.storybook-texture {
+  background-image:
+    radial-gradient(circle at 16% 22%, rgba(255, 255, 255, 0.58) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 72% 18%, rgba(216, 180, 95, 0.16) 0 1px, transparent 1.5px),
+    linear-gradient(115deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0));
+  background-size: 28px 28px, 36px 36px, 100% 100%;
+}
+
+.wood-grain {
+  background-image:
+    linear-gradient(90deg, rgba(92, 58, 34, 0.13) 1px, transparent 1px),
+    radial-gradient(ellipse at 30% 40%, rgba(255, 229, 173, 0.2), transparent 34%),
+    linear-gradient(180deg, #b5794c, #875333 58%, #704226);
+  background-size: 34px 100%, 100% 100%, 100% 100%;
+}
+
+.soft-outline {
+  filter: drop-shadow(0 10px 18px rgba(73, 55, 42, 0.13));
+}
+
+.ark-clip {
+  clip-path: path("M 20 42 C 74 12 264 12 318 42 L 284 154 C 235 178 96 178 48 154 Z");
 }
