@@ -1,35 +1,43 @@
-import type { Metadata } from "next";
-import { Baloo_2, Geist_Mono, Nunito } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Baloo_2, Geist_Mono, Nunito } from 'next/font/google';
+import './globals.css';
 
 const baloo = Baloo_2({
-  variable: "--font-baloo",
-  subsets: ["latin"],
-  display: "swap",
+  variable: '--font-baloo',
+  subsets: ['latin'],
+  display: 'swap',
 });
 
 const nunito = Nunito({
-  variable: "--font-nunito",
-  subsets: ["latin"],
-  display: "swap",
+  variable: '--font-nunito',
+  subsets: ['latin'],
+  display: 'swap',
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-  display: "swap",
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
+  display: 'swap',
 });
 
-export const metadata: Metadata = {
-  title: "Isaac 1 ano | Arca de Noé",
+export const metadata = {
+  title: '1 aninho do Isaac',
   description:
-    "Confirme sua presença no aniversário de 1 ano do Isaac, uma celebração com tema Arca de Noé em Niterói.",
+    'O Isaac vai viver uma grande aventura... e esse 1 aninho só fica completo com você.',
+
   openGraph: {
-    title: "O Isaac vai viver uma grande aventura...",
-    description:
-      "E esse 1 aninho só fica completo com você.",
-    type: "website",
-    locale: "pt_BR",
+    title: '1 aninho do Isaac',
+    description: 'O Isaac vai viver uma grande aventura...',
+    images: [
+      {
+        url: '/opengraph-image.png',
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  icons: {
+    icon: '/favicon.ico',
   },
 };
 
