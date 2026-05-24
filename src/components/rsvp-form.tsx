@@ -145,7 +145,7 @@ export function RsvpForm() {
 
         <div className="relative mb-6 text-center">
           <p className="mx-auto inline-flex min-h-9 items-center rounded-full border border-[#ead2ad] bg-white/70 px-4 text-[0.68rem] font-black uppercase tracking-[0.24em] text-[#b78d35] shadow-sm">
-            Confirmação da arca
+            Confirme sua presença
           </p>
           <h2 className="font-display mx-auto mt-4 max-w-[20ch] text-balance text-[2.8rem] font-black leading-[0.82] tracking-normal text-[#49372a] sm:text-[2.5rem]">
             Você vem comemorar com a gente?
@@ -173,7 +173,7 @@ export function RsvpForm() {
               onBlur={() => setFocused(null)}
               onChange={(event) => setName(event.target.value)}
               autoComplete="name"
-              placeholder="Quem vai entrar na arca?"
+              placeholder="Quem vai embarcar nessa aventura?"
               className="min-h-14 w-full bg-transparent px-4 text-base font-black text-[#49372a] outline-none placeholder:text-[#aa927b]"
               required
             />
