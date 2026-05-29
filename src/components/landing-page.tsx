@@ -51,7 +51,7 @@ function Hero() {
           Isaac faz 1 ano
         </p>
         <h1 className="font-display max-w-[10ch] text-balance text-[3.18rem] font-black leading-[0.85] tracking-normal text-[#49372a] drop-shadow-[0_4px_0_rgba(255,255,255,0.32)] sm:max-w-[12ch] sm:text-7xl lg:max-w-[13ch] lg:text-[6.4rem]">
-          O Isaac vai viver uma grande aventura…
+          O Isaac embarca em uma linda jornada…
         </h1>
         <p className="mt-3 max-w-[22rem] text-pretty text-xl font-black leading-7 text-[#604a3c] sm:max-w-xl sm:text-2xl">
           E esse 1º aninho só fica completo com você.
